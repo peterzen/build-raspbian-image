@@ -41,3 +41,5 @@ hdmi_force_hotplug=1
 
 #uncomment to overclock the arm. 700 MHz is the default.
 #arm_freq=800
+
+initramfs initramfs.gz followkernel

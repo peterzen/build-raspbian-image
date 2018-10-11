@@ -7,14 +7,15 @@ vmdebootstrap \
     --distribution stretch \
     --mirror http://localhost:3142/archive.raspbian.org/raspbian \
     --image `date +raspbian-%Y%m%d.img` \
-    --size 2000M \
+    --size 1G \
     --bootsize 64M \
     --boottype vfat \
     --root-password raspberry \
     --verbose \
     --no-kernel \
     --no-extlinux \
-    --hostname raspberry \
+    --hostname wally \
+    --roottype btrfs \
     --foreign /usr/bin/qemu-arm-static \
     --debootstrapopts="keyring=$SOURCEDIR/raspbian.org.gpg" \
     --customize "$SOURCEDIR/customize.sh"
